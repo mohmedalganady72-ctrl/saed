@@ -27,7 +27,7 @@ class FormLogin extends StatelessWidget {
         AppTextFieldForm(
           // UI outpute : "Enter your academic number"
           hintText: context.localization.hintTextFiledNumberAcadyme,
-          // keyboardType: TextInputType.number,
+          keyboardType: TextInputType.number,
 
           validator: (value) {
             if (value == null || value.isEmpty) {
@@ -46,6 +46,7 @@ class FormLogin extends StatelessWidget {
         verticalSpace(10),
         AppTextFieldForm(
           // UI outpute : "Enter your password"
+          keyboardType: TextInputType.number,
 
           hintText: context.localization.hintTextFiledPassword,
 

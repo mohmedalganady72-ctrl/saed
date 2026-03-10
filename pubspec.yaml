@@ -40,7 +40,7 @@ dependencies:
   flutter_bloc: ^9.1.1
   get_it: ^9.2.1
   dio: ^5.9.2
-  intl: ^0.20.2
+  intl: ^0.18.1
   flutter_svg: ^2.0.10+1
   cached_network_image: ^3.4.0
   shared_preferences: ^2.2.3

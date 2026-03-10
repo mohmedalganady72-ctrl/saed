@@ -5,13 +5,17 @@ import 'api_result.dart';
 
 abstract class ApiService {
   Future<ApiResult<T>> get<T>(
-      {String endpoint, Map<String, dynamic>? queryParameters});
-  Future<ApiResult<T>> post<T>(String endpoint,
-      {Map<String, dynamic>? queryParameters, dynamic data});
-  Future<ApiResult<T>> put<T>(String endpoint,
-      {Map<String, dynamic>? queryParameters, dynamic data});
-  Future<ApiResult<T>> delete<T>(String endpoint,
-      {Map<String, dynamic>? queryParameters});
+      {required String endpoint, Map<String, dynamic>? queryParameters});
+  Future<ApiResult<T>> post<T>(
+      {required String endpoint,
+      Map<String, dynamic>? queryParameters,
+      dynamic data});
+  Future<ApiResult<T>> put<T>(
+      {required String endpoint,
+      Map<String, dynamic>? queryParameters,
+      dynamic data});
+  Future<ApiResult<T>> delete<T>(
+      {required String endpoint, Map<String, dynamic>? queryParameters});
 }
 
 class DioService implements ApiService {
@@ -20,8 +24,8 @@ class DioService implements ApiService {
   DioService({required Dio dio}) : _dio = dio;
 
   @override
-  Future<ApiResult<T>> delete<T>(String endpoint,
-      {Map<String, dynamic>? queryParameters}) async {
+  Future<ApiResult<T>> delete<T>(
+      {required String endpoint, Map<String, dynamic>? queryParameters}) async {
     try {
       final response = await _dio.delete(
         endpoint,
@@ -35,8 +39,8 @@ class DioService implements ApiService {
   }
 
   @override
-  Future<ApiResult<T>> get<T>(String endpoint,
-      {Map<String, dynamic>? queryParameters}) async {
+  Future<ApiResult<T>> get<T>(
+      {required String endpoint, Map<String, dynamic>? queryParameters}) async {
     try {
       final response = await _dio.get(
         endpoint,
@@ -50,12 +54,15 @@ class DioService implements ApiService {
   }
 
   @override
-  Future<ApiResult<T>> post<T>(String endpoint,
-      {Map<String, dynamic>? queryParameters}) async {
+  Future<ApiResult<T>> post<T>(
+      {required String endpoint,
+      Map<String, dynamic>? queryParameters,
+      dynamic data}) async {
     try {
       final response = await _dio.post(
         endpoint,
         queryParameters: queryParameters,
+        data: data,
       );
 
       return ApiResult.success(response.data);
@@ -65,9 +72,20 @@ class DioService implements ApiService {
   }
 
   @override
-  Future<ApiResult<T>> put<T>(String endpoint,
-      {Map<String, dynamic>? queryParameters}) {
-    // TODO: implement put
-    throw UnimplementedError();
+  Future<ApiResult<T>> put<T>(
+      {required String endpoint,
+      Map<String, dynamic>? queryParameters,
+      dynamic data}) async {
+    try {
+      final response = await _dio.put(
+        endpoint,
+        queryParameters: queryParameters,
+        data: data,
+      );
+
+      return ApiResult.success(response.data);
+    } catch (e) {
+      return ApiResult.failure(ErrorHandler.handle(e));
+    }
   }
 }
