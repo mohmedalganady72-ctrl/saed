@@ -1,1 +1,16 @@
+<<<<<<< HEAD
 {}
+=======
+{
+"lableFildNumberAcadyme": "Academic number",
+"loginTitle": "Login",
+"hintTextFiledNumberAcadyme": "Enter academic number",
+"lableFildPassword": "Password",
+"hintTextFiledPassword": "Enter password",
+"validatorFiledNumberAcadyme": "Please enter academic number",
+"validatorFiledPassword": "Please enter password",
+"noteVerificationNumberAcademic": "Verification is done using your academic number",
+"loginTextButton": "Login"
+
+}
+>>>>>>> 85b7b6c (feat: setup core structure, localization and login screen)

@@ -1,0 +1,14 @@
+{
+
+    
+"lableFildNumberAcadyme": "الرقم الأكاديمي",
+"loginTitle": "تسجيل الدخول",
+"hintTextFiledNumberAcadyme": "أدخل الرقم الأكاديمي",
+"lableFildPassword": "كلمة المرور",
+"hintTextFiledPassword": "أدخل كلمة المرور",
+"validatorFiledNumberAcadyme": "الرجاء إدخال الرقم الأكاديمي",
+"validatorFiledPassword": "الرجاء إدخال كلمة المرور",
+"noteVerificationNumberAcademic": "يتم التحقق باستخدام الرقم الاكاديمي الخاص بك",
+
+"loginTextButton": "دخول"
+}

@@ -1,5 +1,5 @@
 // DO NOT EDIT. This is code generated via package:intl/generate_localized.dart
-// This is a library that provides messages for a en locale. All the
+// This is a library that provides messages for a ar locale. All the
 // messages from the main program should be duplicated here with the same
 // function name.
 
@@ -18,24 +18,25 @@ final messages = new MessageLookup();
 typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 
 class MessageLookup extends MessageLookupByLibrary {
-  String get localeName => 'en';
+  String get localeName => 'ar';
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "hintTextFiledNumberAcadyme":
-            MessageLookupByLibrary.simpleMessage("Enter academic number"),
+            MessageLookupByLibrary.simpleMessage("أدخل الرقم الأكاديمي"),
         "hintTextFiledPassword":
-            MessageLookupByLibrary.simpleMessage("Enter password"),
+            MessageLookupByLibrary.simpleMessage("أدخل كلمة المرور"),
         "lableFildNumberAcadyme":
-            MessageLookupByLibrary.simpleMessage("Academic number"),
-        "lableFildPassword": MessageLookupByLibrary.simpleMessage("Password"),
-        "loginTextButton": MessageLookupByLibrary.simpleMessage("Login"),
-        "loginTitle": MessageLookupByLibrary.simpleMessage("Login"),
+            MessageLookupByLibrary.simpleMessage("الرقم الأكاديمي"),
+        "lableFildPassword":
+            MessageLookupByLibrary.simpleMessage("كلمة المرور"),
+        "loginTextButton": MessageLookupByLibrary.simpleMessage("دخول"),
+        "loginTitle": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
         "noteVerificationNumberAcademic": MessageLookupByLibrary.simpleMessage(
-            "Verification is done using your academic number"),
+            "يتم التحقق باستخدام الرقم الاكاديمي الخاص بك"),
         "validatorFiledNumberAcadyme": MessageLookupByLibrary.simpleMessage(
-            "Please enter academic number"),
+            "الرجاء إدخال الرقم الأكاديمي"),
         "validatorFiledPassword":
-            MessageLookupByLibrary.simpleMessage("Please enter password")
+            MessageLookupByLibrary.simpleMessage("الرجاء إدخال كلمة المرور")
       };
 }

@@ -49,6 +49,96 @@ class S {
   static S? maybeOf(BuildContext context) {
     return Localizations.of<S>(context, S);
   }
+
+  /// `Academic number`
+  String get lableFildNumberAcadyme {
+    return Intl.message(
+      'Academic number',
+      name: 'lableFildNumberAcadyme',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Login`
+  String get loginTitle {
+    return Intl.message(
+      'Login',
+      name: 'loginTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter academic number`
+  String get hintTextFiledNumberAcadyme {
+    return Intl.message(
+      'Enter academic number',
+      name: 'hintTextFiledNumberAcadyme',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password`
+  String get lableFildPassword {
+    return Intl.message(
+      'Password',
+      name: 'lableFildPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter password`
+  String get hintTextFiledPassword {
+    return Intl.message(
+      'Enter password',
+      name: 'hintTextFiledPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter academic number`
+  String get validatorFiledNumberAcadyme {
+    return Intl.message(
+      'Please enter academic number',
+      name: 'validatorFiledNumberAcadyme',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter password`
+  String get validatorFiledPassword {
+    return Intl.message(
+      'Please enter password',
+      name: 'validatorFiledPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Verification is done using your academic number`
+  String get noteVerificationNumberAcademic {
+    return Intl.message(
+      'Verification is done using your academic number',
+      name: 'noteVerificationNumberAcademic',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Login`
+  String get loginTextButton {
+    return Intl.message(
+      'Login',
+      name: 'loginTextButton',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
@@ -57,6 +147,7 @@ class AppLocalizationDelegate extends LocalizationsDelegate<S> {
   List<Locale> get supportedLocales {
     return const <Locale>[
       Locale.fromSubtags(languageCode: 'en'),
+      Locale.fromSubtags(languageCode: 'ar'),
     ];
   }
 
