@@ -2,7 +2,7 @@ import 'package:json_annotation/json_annotation.dart';
 part 'login_request_body.g.dart';
 
 @JsonSerializable()
-class LoginRequestModel {
+class LoginRequestBody {
   @JsonKey(name: 'academic_numbe')
   final String academicNumber;
   final String password;
@@ -12,14 +12,14 @@ class LoginRequestModel {
   @JsonKey(name: 'device_name')
   final String? deviceName;
 
-  LoginRequestModel(
+  LoginRequestBody(
       {required this.academicNumber,
       required this.password,
       required this.deviceId,
       required this.platform,
       this.deviceName});
 
-  Map<String, dynamic> toJson() => _$LoginRequestModelToJson(this);
+  Map<String, dynamic> toJson() => _$LoginRequestBodyToJson(this);
 }
 
 

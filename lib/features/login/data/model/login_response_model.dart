@@ -2,21 +2,21 @@ import 'package:json_annotation/json_annotation.dart';
 part 'login_response_model.g.dart';
 
 @JsonSerializable()
-class LoginResponse {
+class LoginResponseModel {
   final bool? success;
   final String? message;
   final AuthData? data;
   final int? statusCode;
 
-  LoginResponse({
+  LoginResponseModel({
     this.success,
     this.message,
     this.data,
     this.statusCode,
   });
 
-  factory LoginResponse.fromJson(Map<String, dynamic> json) =>
-      _$LoginResponseFromJson(json);
+  factory LoginResponseModel.fromJson(Map<String, dynamic> json) =>
+      _$LoginResponseModelFromJson(json);
 }
 
 @JsonSerializable()

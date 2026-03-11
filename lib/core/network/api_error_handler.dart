@@ -1,6 +1,7 @@
 import 'package:dio/dio.dart';
 
-import 'api_constant.dart';
+import '../constants/api_error.dart';
+
 import 'api_error_model.dart';
 
 // TODO: wallahy I will refactor this .. Omar Ahmed

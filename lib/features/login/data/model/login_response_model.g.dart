@@ -6,8 +6,8 @@ part of 'login_response_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-LoginResponse _$LoginResponseFromJson(Map<String, dynamic> json) =>
-    LoginResponse(
+LoginResponseModel _$LoginResponseModelFromJson(Map<String, dynamic> json) =>
+    LoginResponseModel(
       success: json['success'] as bool?,
       message: json['message'] as String?,
       data: json['data'] == null
@@ -16,7 +16,7 @@ LoginResponse _$LoginResponseFromJson(Map<String, dynamic> json) =>
       statusCode: (json['statusCode'] as num?)?.toInt(),
     );
 
-Map<String, dynamic> _$LoginResponseToJson(LoginResponse instance) =>
+Map<String, dynamic> _$LoginResponseModelToJson(LoginResponseModel instance) =>
     <String, dynamic>{
       'success': instance.success,
       'message': instance.message,
