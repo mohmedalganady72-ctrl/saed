@@ -1,10 +1,11 @@
+import 'dart:io';
+
 import 'package:dio/dio.dart';
 
 import '../constants/api_error.dart';
 
 import 'api_error_model.dart';
 
-// TODO: wallahy I will refactor this .. Omar Ahmed
 enum DataSource {
   NO_CONTENT,
   BAD_REQUEST,
@@ -127,9 +128,10 @@ class ErrorHandler implements Exception {
     if (error is DioException) {
       // dio error so its an error from response of the API or from dio itself
       apiErrorModel = _handleError(error);
-    } else {
+    } else if (error is SocketException) {
+      apiErrorModel = DataSource.NO_INTERNET_CONNECTION.getFailure();
       // default error
-      apiErrorModel = DataSource.DEFAULT.getFailure();
+      // apiErrorModel = DataSource.DEFAULT.getFailure();
     }
   }
 }

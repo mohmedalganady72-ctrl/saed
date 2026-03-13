@@ -1,9 +1,9 @@
 class ApiEndpoint {
-  static const String apiBaseUrl = "ADD_YOUR_BASE_URL_HERE";
+  static const String apiBaseUrl = "Your-site.com";
 
   // Authentication Endpoints
 
-  static const String login = "auth/login";
+  static const String login = "${apiBaseUrl}auth/login";
   static const String signup = "auth/register";
   static const String refreshToken = "auth/refresh";
 

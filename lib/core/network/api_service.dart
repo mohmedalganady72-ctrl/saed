@@ -1,20 +1,18 @@
 import 'package:dio/dio.dart';
-
-import 'api_error_handler.dart';
-import 'api_result.dart';
+import 'package:saed/core/network/network_info.dart';
 
 abstract class ApiService {
-  Future<ApiResult<T>> get<T>(
+  Future<Response> get(
       {required String endpoint, Map<String, dynamic>? queryParameters});
-  Future<ApiResult<T>> post<T>(
+  Future<Response> post(
       {required String endpoint,
       Map<String, dynamic>? queryParameters,
       dynamic data});
-  Future<ApiResult<T>> put<T>(
+  Future<Response> put(
       {required String endpoint,
       Map<String, dynamic>? queryParameters,
       dynamic data});
-  Future<ApiResult<T>> delete<T>(
+  Future<Response> delete(
       {required String endpoint, Map<String, dynamic>? queryParameters});
 }
 
@@ -24,68 +22,45 @@ class DioService implements ApiService {
   DioService({required Dio dio}) : _dio = dio;
 
   @override
-  Future<ApiResult<T>> delete<T>(
+  Future<Response> delete(
       {required String endpoint, Map<String, dynamic>? queryParameters}) async {
-    try {
-      final response = await _dio.delete(
-        endpoint,
-        queryParameters: queryParameters,
-      );
-
-      return ApiResult.success(response.data);
-    } catch (e) {
-      return ApiResult.failure(ErrorHandler.handle(e));
-    }
+    return await _dio.delete(
+      endpoint,
+      queryParameters: queryParameters,
+    );
   }
 
   @override
-  Future<ApiResult<T>> get<T>(
+  Future<Response> get(
       {required String endpoint, Map<String, dynamic>? queryParameters}) async {
-    try {
-      final response = await _dio.get(
-        endpoint,
-        queryParameters: queryParameters,
-      );
-
-      return ApiResult.success(response.data);
-    } catch (e) {
-      return ApiResult.failure(ErrorHandler.handle(e));
-    }
+    return await _dio.get(
+      endpoint,
+      queryParameters: queryParameters,
+    );
   }
 
   @override
-  Future<ApiResult<T>> post<T>(
+  Future<Response> post(
       {required String endpoint,
       Map<String, dynamic>? queryParameters,
       dynamic data}) async {
-    try {
-      final response = await _dio.post(
-        endpoint,
-        queryParameters: queryParameters,
-        data: data,
-      );
-
-      return ApiResult.success(response.data);
-    } catch (e) {
-      return ApiResult.failure(ErrorHandler.handle(e));
-    }
+    await hasInternetConnection();
+    return await _dio.post(
+      endpoint,
+      queryParameters: queryParameters,
+      data: data,
+    );
   }
 
   @override
-  Future<ApiResult<T>> put<T>(
+  Future<Response> put(
       {required String endpoint,
       Map<String, dynamic>? queryParameters,
       dynamic data}) async {
-    try {
-      final response = await _dio.put(
-        endpoint,
-        queryParameters: queryParameters,
-        data: data,
-      );
-
-      return ApiResult.success(response.data);
-    } catch (e) {
-      return ApiResult.failure(ErrorHandler.handle(e));
-    }
+    return await _dio.put(
+      endpoint,
+      queryParameters: queryParameters,
+      data: data,
+    );
   }
 }

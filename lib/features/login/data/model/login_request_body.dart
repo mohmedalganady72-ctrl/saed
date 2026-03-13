@@ -3,7 +3,7 @@ part 'login_request_body.g.dart';
 
 @JsonSerializable()
 class LoginRequestBody {
-  @JsonKey(name: 'academic_numbe')
+  @JsonKey(name: 'academic_number')
   final String academicNumber;
   final String password;
   @JsonKey(name: 'device_id')
