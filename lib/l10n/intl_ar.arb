@@ -1,0 +1,29 @@
+{
+  "lableFildNumberAcadyme": "الرقم الأكاديمي",
+  "loginTitle": "تسجيل الدخول",
+  "hintTextFiledNumberAcadyme": "أدخل الرقم الأكاديمي",
+  "lableFildPassword": "كلمة المرور",
+  "hintTextFiledPassword": "أدخل كلمة المرور",
+  "validatorNullFiled": "الرجاء إدخال بيانات هاذا الحقل ",
+  "validatorFiledNumber": "الرجاء إدخال ارقام من 0 الى 9 فقط ",
+  
+  "noteVerificationNumberAcademic": "يتم التحقق باستخدام الرقم الأكاديمي الخاص بك",
+  "loginTextButton": "دخول",
+
+  "badRequestError": "تعذر معالجة الطلب. يرجى التحقق من البيانات المدخلة.",
+  "noContent": "لا توجد بيانات متاحة حالياً.",
+  "forbiddenError": "ليس لديك صلاحية للوصول إلى هذا المحتوى.",
+  "unauthorizedError": "انتهت صلاحية الجلسة. يرجى تسجيل الدخول مرة أخرى.",
+  "notFoundError": "لم نتمكن من العثور على ما تبحث عنه.",
+  "conflictError": "حدث تعارض في البيانات. يرجى المحاولة مرة أخرى.",
+  "internalServerError": "حدث خطأ غير متوقع. نعمل على إصلاحه.",
+  "unknownError": "حدث أمر غير متوقع. يرجى المحاولة لاحقاً.",
+  "timeoutError": "استغرق الاتصال وقتاً أطول من المتوقع. يرجى المحاولة مجدداً.",
+  "defaultError": "حدث خطأ ما. يرجى المحاولة مرة أخرى.",
+  "cacheError": "تعذر تحميل البيانات المحفوظة.",
+  "noInternetError": "لا يوجد اتصال بالإنترنت. تحقق من الشبكة وحاول مجدداً.",
+  "loadingMessage": "يرجى الانتظار...",
+  "retryAgainMessage": "حاول مرة أخرى",
+  "ok": "حسناً",
+  "sory": "عذرا"
+}

@@ -21,5 +21,50 @@ class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'en';
 
   final messages = _notInlinedMessages(_notInlinedMessages);
-  static Map<String, Function> _notInlinedMessages(_) => <String, Function>{};
+  static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "badRequestError": MessageLookupByLibrary.simpleMessage(
+            "Unable to process the request. Please check your input."),
+        "cacheError":
+            MessageLookupByLibrary.simpleMessage("Failed to load saved data."),
+        "conflictError": MessageLookupByLibrary.simpleMessage(
+            "Data conflict occurred. Please try again."),
+        "defaultError": MessageLookupByLibrary.simpleMessage(
+            "Something went wrong. Please try again."),
+        "forbiddenError": MessageLookupByLibrary.simpleMessage(
+            "You do not have permission to access this content."),
+        "hintTextFiledNumberAcadyme":
+            MessageLookupByLibrary.simpleMessage("Enter academic number"),
+        "hintTextFiledPassword":
+            MessageLookupByLibrary.simpleMessage("Enter password"),
+        "internalServerError": MessageLookupByLibrary.simpleMessage(
+            "An unexpected error occurred. We’re working on it."),
+        "lableFildNumberAcadyme":
+            MessageLookupByLibrary.simpleMessage("Academic number"),
+        "lableFildPassword": MessageLookupByLibrary.simpleMessage("Password"),
+        "loadingMessage":
+            MessageLookupByLibrary.simpleMessage("Please wait..."),
+        "loginTextButton": MessageLookupByLibrary.simpleMessage("Login"),
+        "loginTitle": MessageLookupByLibrary.simpleMessage("Login"),
+        "noContent": MessageLookupByLibrary.simpleMessage(
+            "No data available at the moment."),
+        "noInternetError": MessageLookupByLibrary.simpleMessage(
+            "No internet connection. Please check your network."),
+        "notFoundError": MessageLookupByLibrary.simpleMessage(
+            "We couldn’t find what you’re looking for."),
+        "noteVerificationNumberAcademic": MessageLookupByLibrary.simpleMessage(
+            "Verification is done using your academic number"),
+        "ok": MessageLookupByLibrary.simpleMessage("OK"),
+        "retryAgainMessage": MessageLookupByLibrary.simpleMessage("Try again"),
+        "sory": MessageLookupByLibrary.simpleMessage("sory"),
+        "timeoutError": MessageLookupByLibrary.simpleMessage(
+            "The request took too long. Please try again."),
+        "unauthorizedError": MessageLookupByLibrary.simpleMessage(
+            "Session expired. Please log in again."),
+        "unknownError": MessageLookupByLibrary.simpleMessage(
+            "Something went wrong. Please try again later."),
+        "validatorFiledNumber": MessageLookupByLibrary.simpleMessage(
+            "Please enter a valid number from 0 to 9 only"),
+        "validatorNullFiled":
+            MessageLookupByLibrary.simpleMessage("Please enter data this field")
+      };
 }

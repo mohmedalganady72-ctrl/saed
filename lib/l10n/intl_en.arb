@@ -1,1 +1,29 @@
-{}
+{
+  "lableFildNumberAcadyme": "Academic number",
+  "loginTitle": "Login",
+  "hintTextFiledNumberAcadyme": "Enter academic number",
+  "lableFildPassword": "Password",
+  "hintTextFiledPassword": "Enter password",
+  "validatorNullFiled": "Please enter data this field",
+  "validatorFiledNumber":  "Please enter a valid number from 0 to 9 only",
+
+  "noteVerificationNumberAcademic": "Verification is done using your academic number",
+  "loginTextButton": "Login",
+
+  "badRequestError": "Unable to process the request. Please check your input.",
+  "noContent": "No data available at the moment.",
+  "forbiddenError": "You do not have permission to access this content.",
+  "unauthorizedError": "Session expired. Please log in again.",
+  "notFoundError": "We couldn’t find what you’re looking for.",
+  "conflictError": "Data conflict occurred. Please try again.",
+  "internalServerError": "An unexpected error occurred. We’re working on it.",
+  "unknownError": "Something went wrong. Please try again later.",
+  "timeoutError": "The request took too long. Please try again.",
+  "defaultError": "Something went wrong. Please try again.",
+  "cacheError": "Failed to load saved data.",
+  "noInternetError": "No internet connection. Please check your network.",
+  "loadingMessage": "Please wait...",
+  "retryAgainMessage": "Try again",
+  "ok": "OK",
+  "sory": "sory"
+}
