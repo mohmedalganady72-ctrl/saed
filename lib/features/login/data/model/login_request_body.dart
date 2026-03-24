@@ -21,15 +21,3 @@ class LoginRequestBody {
 
   Map<String, dynamic> toJson() => _$LoginRequestBodyToJson(this);
 }
-
-
-
-
-
-// {
-//   "academic_number": "441234567",
-//   "password": "123456",
-//   "device_id": "android-441234567-device",
-//   "platform": "android",
-//   "device_name": "Samsung S24"
-// }

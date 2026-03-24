@@ -1,9 +1,8 @@
 import 'package:dio/dio.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
-import 'package:saed/core/constants/api_endpoint.dart';
-import 'package:saed/core/helper/shared_prefrance_helper.dart';
 
 import '../constants/token_shared_prefrance_key.dart';
+import '../services/shared_prefrance_service.dart';
 
 class DioFactory {
   /// private constructor as I don't want to allow creating an instance of this class
@@ -33,7 +32,7 @@ class DioFactory {
     dio?.options.headers = {
       'Accept': 'application/json',
       'Authorization':
-          'Bearer ${await SharedPrefranceHelper.getString(TokenSharedPrefracneKey.accessToken)}',
+          'Bearer ${await SharedPrefranceService.getInt(TokenSharedPrefracneKey.accessToken)}',
       // 'Bearer ${await SharedPrefranceHelper.getSecuredString(TokenSharedPrefracneKey.accessToken)}',
     };
   }
@@ -45,12 +44,12 @@ class DioFactory {
   }
 
   static void addDioInterceptor() {
-    dio?.interceptors.add(
+    dio?.interceptors.addAll([
       PrettyDioLogger(
         requestBody: true,
         requestHeader: true,
         responseHeader: true,
       ),
-    );
+    ]);
   }
 }

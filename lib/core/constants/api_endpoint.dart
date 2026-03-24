@@ -1,36 +1,31 @@
 class ApiEndpoint {
-  static const String apiBaseUrl = "Your-site.com";
+  static const String apiBaseUrl = "YOUR_HOST_API";
 
   // Authentication Endpoints
 
   static const String login = "${apiBaseUrl}auth/login";
-  static const String signup = "auth/register";
-  static const String refreshToken = "auth/refresh";
+  static const String signup = "${apiBaseUrl}auth/register";
+  static const String refreshToken = "${apiBaseUrl}auth/refresh";
 
   // User Endpoints
 
-  static const String userProfile = "me";
-  static const String userNotifications = "me/notifications";
-  static const String readAllNotifications = "me/notifications/read-all";
-
-  // static String getUserNotificationsByLimit({required int id}) =>
-  //     "me/notifications?limit=$id";
-
-  // static String markNotificationAsRead({required int id}) =>
-  //     "me/notifications/$id/read";
+  static const String userProfile = "${apiBaseUrl}me";
+  static const String userNotifications = "${apiBaseUrl}me/notifications";
+  static const String readAllNotifications =
+      "${apiBaseUrl}me/notifications/read-all";
 
   //catagory
-  static const String allCategories = "categories";
+  static const String allCategories = "${apiBaseUrl}categories";
   // listing
 
-  static const String allListings = "listings";
-  static const String userListing = "listings/mine";
-  // static String getListing({required int id}) => "/listings/$id";
+  static const String allListings = "${apiBaseUrl}listings";
+  static const String userListing = "${apiBaseUrl}listings/mine";
+
   //Request
 
-  static const String order = "requests";
-  static const String orderIncome = "requests/incoming";
-  static const String orderOut = "requests/outgoing";
+  static const String order = "${apiBaseUrl}requests";
+  static const String orderIncome = "${apiBaseUrl}requests/incoming";
+  static const String orderOut = "${apiBaseUrl}requests/outgoing";
   // Chate
-  static const String message = "messages";
+  static const String message = "${apiBaseUrl}messages";
 }

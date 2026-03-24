@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:saed/core/constants/assete_constant.dart';
 
+import '../../../../core/constants/assete_constant.dart';
 import '../../../../core/theme/colors_manager.dart';
 
 class LogoApp extends StatelessWidget {

@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:dio/dio.dart';
 
 import '../constants/api_error.dart';
@@ -121,6 +119,13 @@ extension DataSourceExtension on DataSource {
   }
 }
 
+class NoInternetException implements Exception {
+  final String message;
+  NoInternetException([this.message = "No Internet Connection"]);
+  @override
+  String toString() => message;
+}
+
 class ErrorHandler implements Exception {
   late ApiErrorModel apiErrorModel;
 
@@ -128,7 +133,7 @@ class ErrorHandler implements Exception {
     if (error is DioException) {
       // dio error so its an error from response of the API or from dio itself
       apiErrorModel = _handleError(error);
-    } else if (error is SocketException) {
+    } else if (error is NoInternetException) {
       apiErrorModel = DataSource.NO_INTERNET_CONNECTION.getFailure();
       // default error
       // apiErrorModel = DataSource.DEFAULT.getFailure();

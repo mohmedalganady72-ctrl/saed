@@ -6,6 +6,7 @@ class LoginResponseModel {
   final bool? success;
   final String? message;
   final AuthData? data;
+  @JsonKey(name: "status_code")
   final int? statusCode;
 
   LoginResponseModel({
@@ -21,11 +22,18 @@ class LoginResponseModel {
 
 @JsonSerializable()
 class AuthData {
+  @JsonKey(name: "access_token")
   final String? accessToken;
+  @JsonKey(name: "refresh_token")
   final String? refreshToken;
+  @JsonKey(name: "token_type")
   final String? tokenType;
+  @JsonKey(name: "access_token_expires_in")
   final int? accessTokenExpiresIn;
+
+  @JsonKey(name: "refresh_token_expires_in")
   final int? refreshTokenExpiresIn;
+  @JsonKey(name: "refresh_token_expires_at")
   final String? refreshTokenExpiresAt;
   final User? user;
 
@@ -46,13 +54,19 @@ class AuthData {
 @JsonSerializable()
 class User {
   final int? id;
+  @JsonKey(name: "academic_number")
   final String? academicNumber;
+  @JsonKey(name: "full_name")
   final String? fullName;
+  @JsonKey(name: "profile_image")
   final String? profileImage;
   final String? bio;
   final String? department;
+  @JsonKey(name: "academic_level")
   final String? academicLevel;
+  @JsonKey(name: "is_notifications_enabled")
   final bool? isNotificationsEnabled;
+  @JsonKey(name: "created_at")
   final String? createdAt;
 
   User({

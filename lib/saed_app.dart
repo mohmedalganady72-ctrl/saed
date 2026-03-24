@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+
 import 'package:flutter_localizations/flutter_localizations.dart';
-// import 'package:flutter_localizations/flutter_localizations.dart';
+
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:saed/core/routing/app_router.dart';
-import 'package:saed/core/routing/routes.dart';
 
 import 'package:saed/generated/l10n.dart';
 
+import 'core/constants/token_shared_prefrance_key.dart';
+import 'core/routing/app_router.dart';
+import 'core/routing/routes.dart';
 import 'core/theme/colors_manager.dart';
 
 class SaedApp extends StatelessWidget {
@@ -27,7 +29,11 @@ class SaedApp extends StatelessWidget {
           supportedLocales: S.delegate.supportedLocales,
           theme: _themeData,
           debugShowCheckedModeBanner: false,
-          initialRoute: Routes.loginScreen,
+          initialRoute: !isLoggedInUser
+              ? Routes.loginScreen
+              : isProfileCompleted
+                  ? Routes.homeScreen
+                  : Routes.completProfileScreen,
           onGenerateRoute: AppRouter.generateRoute,
           onUnknownRoute: AppRouter.onUnknownRout,
         ));
@@ -52,6 +58,9 @@ ThemeData get _themeData => ThemeData(
     textSelectionTheme:
         const TextSelectionThemeData(cursorColor: ColorsManager.primaryColor),
     colorScheme:
-        const ColorScheme.light(background: ColorsManager.backgroundScreen),
+        // const ColorScheme.light(background: ColorsManager.backgroundScreen),
+        ColorScheme.fromSeed(
+            seedColor: ColorsManager.primaryColor,
+            background: ColorsManager.backgroundScreen),
     fontFamily: "Cairo",
     primaryColor: ColorsManager.primaryColor);

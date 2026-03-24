@@ -51,4 +51,19 @@ class AppTextStyles {
         fontWeight: FontWeightHelper.bold,
         color: Colors.white);
   }
+
+  static TextStyle font16BoldWhite() {
+    return TextStyle(
+        fontSize: 16.sp,
+        fontWeight: FontWeightHelper.bold,
+        color: Colors.white);
+  }
+
+  static TextStyle font16MediumBlack54() {
+    return const TextStyle(
+      fontWeight: FontWeightHelper.medium,
+      fontSize: 16,
+      color: Colors.black54,
+    );
+  }
 }
